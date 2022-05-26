@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validación de Formulario con Javascript</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/estilodonativos.css">
+</head>
+<body>
+	<main>
+		<div class="logo">
+			<div class="imagen">
+				<img src="" alt="">
+			</div>
+			<div class="titulo"> 
+
+			</div>
+		</div>
+
+		<form action="" class="formulario" id="formulario">
+			<!-- Grupo: monto -->
+			<div class="formulario__grupo" id="grupo__monto">
+				<label for="monto" class="formulario__label">Monto a donar</label>
+				<div class="formulario__grupo-input">
+					<input type="number" class="formulario__input" name="monto" id="monto" placeholder="$20.000">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">debe contener numeros, sin ningun símbolo</p>
+			</div>
+
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Paul Mcarne">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El nombre debe estar compuesto por soolo letras</p>
+			</div>
+
+
+			<!-- Grupo: Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Email</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="john@lemon.uk">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+			</div>
+
+			<!-- Grupo: Teléfono -->
+			<div class="formulario__grupo" id="grupo__telefono">
+				<label for="telefono" class="formulario__label">Teléfono</label>
+				<div class="formulario__grupo-input">
+					<input type="number" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 9 dígitos.</p>
+			</div>
+
+			<!-- Grupo: Terminos y Condiciones -->
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>
+
+			<div class="formulario__grupo botom">
+				<button type="submit" class="formulario__btn">Enviar</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+			</div>
+		</form>
+	</main>
+	<script src="js/formularioDonativos.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	
+</body>
+</html>

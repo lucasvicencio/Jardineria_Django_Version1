@@ -1,0 +1,52 @@
+
+body{
+
+}
+.arriba{
+    width: 100%;
+    height: 35px;
+    background-color: rgb(221, 153, 90);
+}
+.logos{
+    transform: translateY(40px) translateX(30px);
+    float: left;
+    width: 400px;
+    height: 200px;
+}
+.logos h1{
+    font-size: 0.90cm;
+    font-family: cursive;
+    transform: translateX(200px) translateY(-95px);
+}
+.imagen{
+    width: 150px;
+    height: 150px;
+
+}
+.redes{
+    float: left;
+    width: 300px;
+    height: 200px;
+    transform: translateX(150px) translateY(75px);
+}
+.imagenDos{ 
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+}
+.imagenDosF{
+    width: 50px;
+    height: 40px;
+    margin: 15px;
+}
+.imagenDosI{
+    width: 50px;
+    height: 30px;
+    margin: 15px;
+}
+.usuarioBuqueda{
+    float: left;
+    width: 300px;
+    height: 200px;
+    transform: translateX(300px) translateY(95px);
+}

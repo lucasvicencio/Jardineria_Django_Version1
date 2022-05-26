@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css\estiloContacto.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <div class="titulo">
+        <h3>Contactanos</h3>
+        <p>Ante cualquier duda o requerimiento, puedes contáctanos por este medio de comunicación 
+        para ponernos en contacto contigo!</p> 
+    </div>
+    <form id="formularioContacto">
+        <div class="fondo">
+            <div class="inputs">
+                <h3>Envíanos un mensaje</h3>
+    
+                <div  id="grupo__nombre">
+                    <label for="nombre" class="formulario__label"></label>
+                    <div class="formulario__grupo-input">
+                        <input class="control" type="text" name="nombre" id="nombre" placeholder="Nombre completo">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El nombre no debe contener ningún simbolo o número</p>
+                </div>
+    
+                <div id="grupo__correo">
+                    <label for="email" class="formulario__label"></label>
+                    <div class="formulario__grupo-input">
+                        <input class="control" type="email" name="correo" id="correo" placeholder="Email">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                </div>
+                
+                <div id="grupo__telefono">
+                    <label for="telefono" class="formulario__label"></label>
+                    <div class="formulario__grupo-input">
+                        <input type="number" class="control" name="telefono" id="telefono" placeholder="Telefono">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El telefono solo puede contener numeros, entre 7 y 9 dígitos.</p>
+                </div>
+    
+                <div id="grupo__organizacion">
+                    <label for="organizacion" class="formulario__label"></label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="control" name="organizacion" id="organizacion" placeholder="Rubro / Empresa">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">Solo es necesaria la utilización de letras</p>
+                </div>
+    
+                <div id="grupo__mensaje">
+                    <label for="telefono" class="formulario__label"></label>
+                    <div class="formulario__grupo-input">
+                        <textarea type="text" class="mensaje" name="mensaje" id="mensaje" placeholder="Escriba su mensaje"></textarea>
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El mensaje solo puede contener un minimo de 40 caracteres hasta un maximo de 250</p>
+                </div>
+    
+                <div class="formulario__mensaje" id="formulario__mensaje">
+                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                </div>
+    
+                <div class="formulario__grupo-btn-enviar">
+                    <button type="submit" class="formulario__btn">Enviar</button>
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Tu mensaje será respondido dentro de las 24 horas</p>
+                </div>
+            </div>
+            
+        </div>
+    </form>
+    
+    <script src="js\formularioContacto.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+</html>
