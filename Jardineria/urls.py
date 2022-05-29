@@ -15,8 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from core.views import home, formularioContacto, Donativos, metodoPago
+
+from core.views import Donativos, home, metodoPago
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),
+    path('home/', home),
+    path('formularioContacto/', formularioContacto),
+    path('Donativos/', Donativos),
+    path('metodoPago/', metodoPago)
 ]

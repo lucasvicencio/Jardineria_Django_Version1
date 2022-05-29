@@ -1,6 +1,6 @@
 
 body{
-    background-image: url(../img/contactoFondo.jpg);
+    background-image: url(..core/img/contactoFondo.jpg);
     flex-wrap: wrap;
 }
 

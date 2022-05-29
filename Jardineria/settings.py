@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-#m2w9se#2vcpqa*^@=wxgs)$kk=j@u-rjb+1kyc6#l^rm99wo3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
-STATICFILES_DIRS=['C:/Users/Thinkpad Ultrabook/ProyectosDjango/Jardineria/core/static/core']
+STATICFILES_DIRS=['core/static/core']
 
 # Application definition
 

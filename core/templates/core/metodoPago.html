@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Formulario de Tarjeta de Crédito Dinámico</title>
-	<link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/estilos.css">
+	<link href="{% static 'https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap' %}" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
 </head>
 <body>
 	<div class="contenedor"> 
@@ -15,9 +16,9 @@
 		<section class="tarjeta" id="tarjeta">
 			<div class="delantera">
 				<div class="logo-marca" id="logo-marca">
-					<!-- <img src="img/logos/visa.png" alt=""> -->
+					<!-- <img src="{% static 'img/logos/visa.png' %}" alt=""> -->
 				</div>
-				<img src="img/chip-tarjeta.png" class="chip" alt="">
+				<img src="{% static 'img/chip-tarjeta.png' %}" class="chip" alt="">
 				<div class="datos">
 					<div class="grupo" id="numero">
 						<p class="label">Número Tarjeta</p>
@@ -57,7 +58,7 @@
 		<!-- Contenedor Boton Abrir Formulario -->
 		<div class="contenedor-btn">
 			<button class="btn-abrir-formulario" id="btn-abrir-formulario">
-				<i class="fas fa-plus"></i>
+				<i class="fas fa-plus">✚</i>
 			</button>
 		</div>
 
@@ -99,7 +100,7 @@
 		</form>
 	</div>
 
-	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-	<script src="js/main.js"></script>
+	<script src="{% static 'https://kit.fontawesome.com/2c36e9b7b1.js' %}" crossorigin="anonymous"></script>
+	<script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

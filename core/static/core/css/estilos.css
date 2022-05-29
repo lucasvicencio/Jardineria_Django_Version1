@@ -50,7 +50,7 @@ body {
 
 .tarjeta .delantera {
 	width: 100%;
-	background: url(../img/bg-tarjeta/bg-tarjeta-02.jpg);
+	background: url(../core/img/bg-tarjeta/bg-tarjeta-02.jpg);
 	background-size: cover;
 }
 
