@@ -1,2 +1,5 @@
 Django == 4.0.5
 pillow
+
+#Instalar django_interface para personalizar panel 
+django-admin-interface
