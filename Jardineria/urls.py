@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from core.views import home, formularioContacto, Donativos, metodoPago
+from core.views import home, formularioContacto, Donativos, metodoPago, registrar
+from django.conf import settings
 
-from core.views import Donativos, home, metodoPago
+
+
+from core.views import Donativos, home, metodoPago, registrar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +28,7 @@ urlpatterns = [
     path('home/', home),
     path('formularioContacto/', formularioContacto),
     path('Donativos/', Donativos),
-    path('metodoPago/', metodoPago)
+    path('metodoPago/', metodoPago),
+    path('registrar/', registrar)
 ]
+

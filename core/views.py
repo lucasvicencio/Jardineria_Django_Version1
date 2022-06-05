@@ -20,3 +20,5 @@ def metodoPago(request):
 
     return render(request, 'core/metodoPago.html')
     
+def registrar(request):
+    return render(request, 'core/registrar.html')
