@@ -1,7 +1,5 @@
 from django.contrib import admin
-from .models import Categoria
-from .models import Producto
-from .models import Marca
+from .models import Categoria, Producto, Marca, Contacto
 
 # Register your models here.
 
@@ -13,3 +11,6 @@ admin.site.register(Marca)
 
 #Registrar Producto
 admin.site.register(Producto)
+
+#Registrar Contacto
+admin.site.register(Contacto)
