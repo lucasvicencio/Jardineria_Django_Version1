@@ -3,3 +3,5 @@ pillow
 
 #Instalar django_interface para personalizar panel 
 django-admin-interface
+
+django-crispy-forms

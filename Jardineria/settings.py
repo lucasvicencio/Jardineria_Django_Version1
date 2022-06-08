@@ -41,8 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core.apps.CoreConfig',
     'colorfield',
+    'crispy_forms',
 
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 X_FRAME_OPTIONS='SAMEORIGIN' # only if django version >= 3.0
 
