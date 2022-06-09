@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 
 ]
 
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap'
 
 X_FRAME_OPTIONS='SAMEORIGIN' # only if django version >= 3.0
 
