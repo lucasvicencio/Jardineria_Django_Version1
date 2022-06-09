@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 STATICFILES_DIRS=['core/static/core']
 
 # Application definition
