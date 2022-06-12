@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from re import M
 from tabnanny import verbose
 from django.db import models
@@ -25,11 +26,12 @@ class Marca(models.Model):
 
 class Producto(models.Model):
     idProducto = models.IntegerField(primary_key=True, verbose_name='Id de Producto')
-    nombreProducto = models.CharField(max_length=50, verbose_name='Nombre del Producto')
+    nombre = models.CharField(max_length=50, verbose_name='Nombre del Producto')
+    precio = models.IntegerField()
+    descripcion = models.TextField()
     imagen = models.ImageField(upload_to="productos", null=True)
-
     def __str__(self):
-        return self.nombreProducto
+        return self.nombre
 
 
 opciones_consultas = [

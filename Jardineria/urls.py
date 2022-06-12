@@ -13,11 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from xml.dom.minidom import Document
 from django.contrib import admin
 from django.urls import path, include
+from Jardineria.settings import DEBUG
 from core.views import home, formularioContacto, Donativos, metodoPago, registrar, contacto
 from django.conf import settings
-from django.conf.urls.static import static 
+from django.conf.urls.static import static
+
 
 from core.views import Donativos, home, metodoPago, registrar, contacto
 
@@ -34,3 +37,4 @@ urlpatterns = [
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
