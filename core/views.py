@@ -6,13 +6,17 @@ from .forms import ContactoForm, ProductoForm
 
 # Create your views here.
 
-def home(request):
+def flash(request):
     productos = Producto.objects.all()
     data = {
 
         'productos': productos
     }
-    return render(request, 'core/home.html', data)
+    return render(request, 'core/flash.html', data)
+
+def home(request):
+
+    return render(request, 'core/home.html')
 
 def formularioContacto(request):
 
@@ -59,3 +63,15 @@ def agregar_producto(request):
             data["form"] = formulario
 
     return render(request, 'core/producto/agregar.html', data)
+
+def flash(request):
+
+    return render(request, 'core/flash.html')
+
+def listar_productos(request):
+    productos = Producto.objects.all()
+
+    data = {
+        'productos': productos
+    }
+    return render(request, 'core/producto/listar.html', data)

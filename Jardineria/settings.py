@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core.apps.CoreConfig',
     'colorfield',
+    'django.contrib.humanize',
     'crispy_forms',
 
 ]
