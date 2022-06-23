@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar Producto</title>
+    <title>Productos</title>
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 
     <link rel="stylesheet" href="{% static 'css/estilo_contacto.css' %}">
     
@@ -28,9 +28,15 @@
                         <a href="home">Home Garden</a>
                     </li>
                     <li>
-                        <a href="Donativos">Realiza tu Donacion</a>
+                        <a href="Donativos">Donaciones</a>
                     </li>
                     <li><a href="formularioContacto">Registrate</a></li>
+                    <li>
+                        <a href="{% url 'agregar_producto' %}">Agregar Producto</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'listar_productos' %}">Listado Productos</a>
+                    </li>
                 </ul>
             </nav>
 

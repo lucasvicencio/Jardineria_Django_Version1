@@ -25,7 +25,7 @@ class Marca(models.Model):
 # Modelo para PRODUCTO
 
 class Producto(models.Model):
-    idProducto = models.IntegerField(primary_key=True, verbose_name='Id de Producto')
+    id = models.IntegerField(primary_key=True, verbose_name='Id de Producto')
     nombre = models.CharField(max_length=50, verbose_name='Nombre del Producto')
     precio = models.IntegerField()
     descripcion = models.TextField()
