@@ -7,17 +7,19 @@
     <title>Productos</title>
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-
-    <link rel="stylesheet" href="{% static 'css/estilo_contacto.css' %}">
+    {% block css %}
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'core/css/estilo_contacto.css' %}">
     
 </head>
 <body>
 
     
     <header id="header">
-        <img class="menu" src="" alt="menu" id="menu">
+
+        <img class="menu" src="{% static 'img/menuiconwhite.png' %}" alt="menu" id="menu">
         <div class="contenedor_logo">
-            <img  class="logo"  src="" alt="">
+        
         </div>
 
         <div>
@@ -25,18 +27,101 @@
             <nav id="nav">
                 <ul>
                     <li>
-                        <a href="home">Home Garden</a>
+                        <a href="home">Home</a>
                     </li>
                     <li>
                         <a href="Donativos">Donaciones</a>
                     </li>
-                    <li><a href="formularioContacto">Registrate</a></li>
+                    <li><a href="registro">Registrate</a></li>
+                    {% if perms.core.add_producto %}
                     <li>
                         <a href="{% url 'agregar_producto' %}">Agregar Producto</a>
                     </li>
+                    {% endif %}
+                    {% if perms.core.view_producto %}
                     <li>
                         <a href="{% url 'listar_productos' %}">Listado Productos</a>
                     </li>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                    <br>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'logout' %}">Cerrar sesión</a>
+                    </li>
+                    <li>
+                        <a href="#">@{{ user.username }}</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'login' %}">Iniciar sesión</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'registro' %}">Registrate</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </nav>
 
@@ -56,7 +141,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  
+      
     <script src="{% static 'js/menu.js' %}"></script>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

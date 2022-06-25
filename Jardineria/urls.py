@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from xml.dom.minidom import Document
+from django import urls
 from django.contrib import admin
 from django.urls import path, include
 from Jardineria.settings import DEBUG
@@ -27,6 +28,7 @@ from core.views import Donativos, home, metodoPago, registrar, contacto
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('home/', home),
     path('formularioContacto/', formularioContacto),
     path('Donativos/', Donativos),
