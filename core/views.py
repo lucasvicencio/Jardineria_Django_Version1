@@ -12,6 +12,10 @@ from .serializers import ProductoSerializer
 
 # Create your views here.
 
+def error_facebook(request):
+    return render(request, 'registration/error_facebook.html')
+    
+
 class ProductoViewset(viewsets.ModelViewSet):
     queryset = Producto.objects.all()
     serializer_class = ProductoSerializer

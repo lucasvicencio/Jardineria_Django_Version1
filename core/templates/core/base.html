@@ -44,74 +44,18 @@
                     </li>
                     {% endif %}
                     {% if user.is_authenticated %}
-                    <br>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
-                    </li>
-                   
-
                     <li>
                         <a href="{% url 'logout' %}">Cerrar sesión</a>
                     </li>
                     <li>
                         <a href="#">@{{ user.username }}</a>
+                    </li>
+                    <li>
+                        {% for auth in backends.associated %}
+                            {% if auth.provider == 'facebook' %}
+                                <img src="{{ auth.extra_data.picture.data.url }}" alt="" width="50" height="50">
+                            {% endif %}
+                        {% endfor %}
                     </li>
                     {% else %}
                     <li>
@@ -144,7 +88,7 @@
     <script src="{% static 'js/menu.js' %}"></script>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+    {% block mensajeria %}
     {% if messages %}
         {% for m in messages %}
             <script>
@@ -156,7 +100,7 @@
             </script>
         {% endfor %}
     {% endif %}    
-
+    {% endblock %}
     {% block js %}
     {% endblock %}
 

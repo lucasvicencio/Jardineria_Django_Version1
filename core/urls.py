@@ -1,7 +1,7 @@
 from cgitb import html
 from unicodedata import name
 from django.urls import path, include
-from .views import home, Donativos, formularioContacto, listar_productos, metodoPago, registrar, contacto, agregar_producto, flash, listar_productos, modificar_producto, eliminar_producto, registro, ProductoViewset
+from .views import home, Donativos, formularioContacto, listar_productos, metodoPago, registrar, contacto, agregar_producto, flash, listar_productos, modificar_producto, eliminar_producto, registro, ProductoViewset, error_facebook
 from rest_framework import routers
 
 router = routers.DefaultRouter()
@@ -23,5 +23,6 @@ urlpatterns = [
     path('eliminar-producto/<id>/', eliminar_producto, name="eliminar_producto"),
     path('registro/', registro, name="registro"),
     path('api/', include(router.urls)),
+    path('error-facebook/', error_facebook, name="error_facebook.html"),
 ]
 
