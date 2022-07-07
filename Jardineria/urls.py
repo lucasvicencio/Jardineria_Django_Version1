@@ -18,7 +18,7 @@ from django import urls
 from django.contrib import admin
 from django.urls import path, include
 from Jardineria.settings import DEBUG
-from core.views import home, formularioContacto, Donativos, metodoPago, registrar, contacto
+from core.views import home, formularioContacto, Donativos, metodoPago, productos, registrar, contacto, carrito, subscribir, payment
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -35,7 +35,11 @@ urlpatterns = [
     path('Donativos/', Donativos),
     path('metodoPago/', metodoPago),
     path('registrar/', registrar),
-    path('contacto/', contacto)
+    path('contacto/', contacto),
+    path('carrito/', carrito),
+    path('productos/', productos),
+    path('subscribir/', subscribir),
+    path('payment/', payment),
 ]
 
 if settings.DEBUG:

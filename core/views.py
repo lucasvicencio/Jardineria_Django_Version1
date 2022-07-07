@@ -130,6 +130,7 @@ def eliminar_producto(request, id):
     return redirect(to="listar_productos")
 
 def registro(request):
+
     data = {
         'form': CustomUserCreationForm()
     }
@@ -146,3 +147,19 @@ def registro(request):
         data["form"] = formulario
 
     return render(request, 'registration/registro.html', data)
+
+def carrito(request):
+
+    return render(request, 'core/carrito.html')
+
+def productos(request):
+
+    return render(request, 'core/productos.html')
+
+def subscribir(request):
+
+    return render(request, 'core/subscribir.html')
+
+def payment(request):
+
+    return render(request, 'core/payment.html')

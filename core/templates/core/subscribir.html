@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Planes | Garden & CO</title>
+    <link rel="stylesheet" href="{% static 'core/css/subscribe.css' %}">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="tabla">
+            <h2>Plan Herramientas Básico</h2>
+            <img src="{% static 'img/png/herramientas.png' %}" alt="">
+            <h3>$5.000<sup></sup></h3>
+            <p>Paga ahora y recibe un 30% en tus compras de productos de Jardineria</p>
+            <a href="{% url 'payment.html' %}" class="boton">Paga ahora</a>
+        </div>
+        <div class="tabla hover">
+            <h2>Plan Jardineria Estandar</h2>
+            <img src="{% static 'img/png/instalacion.png' %}" alt="">
+            <h3>$10.000<sup></sup></h3>
+            <p>Paga ahora y recibe un 50% en instalaciones de Jardineria Hogar</p>
+            <a href="{% url 'payment.html' %}" class="boton">Paga ahora</a>
+        </div>
+        <div class="tabla">
+            <h2>Plan Jardineria Premium</h2>
+            <img src="{% static 'img/png/plantasinterior.png' %}" alt="">
+            <h3>$15.00<sup></sup></h3>
+            <p>Paga ahora y recibe un 60% Plantas de interior para tu hogar</p>
+            <a href="{% url 'payment.html' %}" class="boton">Paga ahora</a>
+        </div>
+    </div>
+
+</body>
+</html>

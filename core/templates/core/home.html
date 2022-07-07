@@ -3,6 +3,7 @@
 {% load static %}
 
 {% block js %}
+<script type="text/javascript" src="{% static 'core/js/app.js' %}"></script>
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
 <script>
@@ -21,23 +22,22 @@
 {% endblock %}
 
 {% block contenido %}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-
+    <br>
     <div class="slider">
     <br>
     <br>
     <div>
-        <img src="{% static 'img/banner/banner1.png' %}" alt="">
+        <img src="{% static 'img/banner/banner.png' %}" alt="">
     </div>
     <div>
-        <img src="{% static 'img/banner/banner2.png' %}" alt="">
+        <img src="{% static 'img/banner/bannermadera.png' %}" alt="">
     </div>
     <div>
-        <img src="{% static 'img/banner/banner3.png' %}" alt="">
+        <img src="{% static 'img/banner/banner.png' %}" alt="">
     </div>
 </div>
 {% load humanize %}
-<h2>Productos</h2>
+<h2>PRODUCTOS</h2>
     <div class="productos">
         {% for p in productos %}
         <div class="producto">
@@ -51,7 +51,9 @@
                 <h5>{{ p.descripcion }}</h5>
                 <h3>${{ p.precio | intcomma }}</h3>
             </div>
-
+            <br>
+            <button class="u-full-width button-primary button input agregar-carrito" id="boton" target="_blank" onclick="location.href='metodoPago.html'">Realiza tu reserva de nuestros nuevos Productos</button>
+            <br>
         </div>
 
     </div>
@@ -60,3 +62,4 @@
 </div>
         
 {% endblock %}
+
